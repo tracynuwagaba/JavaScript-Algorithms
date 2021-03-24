@@ -12,4 +12,4 @@ function palindrome(str) {
     return reversedStr === lowerCaseStr;
 }
 
-console.log(palindrome("A man, a plan, a canal. Panama"));
+palindrome("A man, a plan, a canal. Panama");
