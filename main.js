@@ -1,54 +1,21 @@
-/* Convert the given number into a roman numeral
-All roman numerals answers should be provided in upper case */
+/* Implement a difference function which subtacts one list from another
+and returns the result.
 
-function convertToRoman(num) {
-    let romanNumeral = "";
+It should remove all values from list a, which are present in list b.
+arrayDiff([1,2],[1]) == [2]
 
-    // Using a while loop with if statements
-    while (num !== 0) {
-        if (num >= 1000) {
-            romanNumeral += 'M';
-            num -= 1000;
-        } else if (num >= 900) {
-            romanNumeral += 'CM';
-            num -= 900;
-        } else if (num >= 500) {
-            romanNumeral += 'D';
-            num -= 500;
-        } else if (num >= 400) {
-            romanNumeral += 'CD';
-            num -= 400;
-        } else if (num >= 100) {
-            romanNumeral += 'C';
-            num -= 100;
-        } else if (num >= 90) {
-            romanNumeral += 'XC';
-            num -= 90;
-        } else if (num >= 50) {
-            romanNumeral += 'L';
-            num -= 50;
-        } else if (num >= 40) {
-            romanNumeral += 'XL';
-            num -= 40;
-        } else if (num >= 10) {
-            romanNumeral += 'X';
-            num -= 10;
-        } else if (num >= 9) {
-            romanNumeral += 'IX';
-            num -= 9;
-        } else if (num >= 5) {
-            romanNumeral += 'V';
-            num -= 5;
-        } else if (num >= 4) {
-            romanNumeral += 'IV';
-            num -= 4;
-        } else {
-            romanNumeral += 'I';
-            num -= 1;
-        }
+If a value is present in b, all of its occurrences must be removed from
+the other.
+arrayDiff([1,2,2,2,3],[2]) = [1,3] */
+
+function arrayDiff(a, b) {
+    if (a.length > 0 && b.length > 0) {
+        return a.filter((num) => !b.includes(num));
+    } else if (b.length == 0) {
+        return a;
+    } else {
+        return a;
     }
-
-    console.log(romanNumeral);
 }
 
-convertToRoman(36);
+console.log(arrayDiff([3,4],[3]));
