@@ -1,18 +1,8 @@
+// Return true if the passed string looks like a valid US phone number
 
-const rot13 = str => {
-    let cipher = "";
-    const alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+function telephoneCheck(str) {
+    let phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+    console.log(phoneRegex.test(str));
+}
 
-    for (let i = 0; i < str.length; i++) {
-        if (/\w/.test(str[i])) {
-            // checks if letter
-            cipher += alphabet[alphabet.indexOf(str[i]) + 13];
-        } else {
-            cipher += str[i];
-        }
-    }
-
-    console.log(cipher);
-};
-
-rot13("SERR PBQR PNZC");
+telephoneCheck("555-555-5555");
