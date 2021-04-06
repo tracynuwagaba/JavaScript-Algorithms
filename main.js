@@ -61,7 +61,7 @@ function checkCashRegister(price, cash, cid) {
         let value = 0;
         // while there is still money of this type in the drawer
         // and while the denomination is higher than the change remaining
-        while(register[curr.name] > 0 && change >= curr.value) {
+        while(register[curr.name] > 0 && change >= curr.val) {
             change -= curr.val;
             register[curr.name] -= curr.val;
             value += curr.val;
