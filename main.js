@@ -66,7 +66,7 @@ function checkCashRegister(price, cash, cid) {
             register[curr.name] -= curr.val;
             value += curr.val;
 
-            // Round change to the nearest hundredth
+            // Round change to the nearest hundredth with precision errors
             change = Math.round(change * 100) / 100;
         }
 
